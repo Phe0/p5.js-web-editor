@@ -19,3 +19,5 @@ localhost.key
 privkey.pem
 
 storybook-static
+
+coverage
