@@ -42,7 +42,8 @@
     ],
     "moduleNameMapper": {
       "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/client/__test__/mocks/fileMock.js"
-    }
+    },
+    "collectCoverageFrom": ["client/**/*.js", "client/**/*.jsx", "server/**/*.js"]
   },
   "main": "index.js",
   "author": "Cassie Tarakajian",
