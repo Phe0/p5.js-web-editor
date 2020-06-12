@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBasic renders correctly 1`] = `
+<nav
+  className="nav"
+  title="main-navigation"
+>
+  <ul
+    className="nav__items-left"
+  >
+    <li
+      className="nav__item-logo"
+    >
+      <test-file-stub
+        aria-label="p5.js Logo"
+        className="svg__logo"
+        focusable="false"
+        role="img"
+      />
+    </li>
+    <li
+      className="nav__item"
+    >
+      <button
+        onClick={[MockFunction]}
+      >
+        <span
+          className="nav__item-header"
+        >
+          <test-file-stub
+            aria-hidden="true"
+            focusable="false"
+          />
+        </span>
+        Back to the editor
+      </button>
+    </li>
+  </ul>
+</nav>
+`;

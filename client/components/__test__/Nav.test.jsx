@@ -6,6 +6,8 @@ import renderer from 'react-test-renderer';
 import { NavComponent } from './../Nav';
 
 describe('Nav', () => {
+  let wrapper = null;
+  let instance = null;
   const props = {
     newProject: jest.fn(),
     saveProject: jest.fn(),
@@ -46,11 +48,14 @@ describe('Nav', () => {
       id: 'root-file'
     }
   };
-  const getWrapper = () => shallow(<NavComponent {...props} />);
 
-  test('it renders main navigation', () => {
-    const nav = getWrapper();
-    expect(nav.exists('.nav')).toEqual(true);
+  beforeEach(() => {
+    wrapper = shallow(<NavComponent {...props} />);
+    instance = wrapper.instance();
+  });
+
+  it('it renders main navigation', () => {
+    expect(wrapper.exists('.nav')).toEqual(true);
   });
 
   it('renders correctly', () => {
@@ -58,5 +63,24 @@ describe('Nav', () => {
       .create(<NavComponent {...props} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it('set dropdown to file', () => {
+    instance.setDropdown('file');
+    expect(wrapper.state('dropdownOpen')).toBe('file');
+  });
+
+  it('set dropdown to none', () => {
+    instance.setDropdown('file');
+    expect(wrapper.state('dropdownOpen')).toBe('file');
+    instance.setDropdown('none');
+    expect(wrapper.state('dropdownOpen')).toBe('none');
+  });
+
+  it('closes dropdown', () => {
+    instance.setDropdown('file');
+    expect(wrapper.state('dropdownOpen')).toBe('file');
+    instance.closeDropDown({ keyCode: 27 });
+    expect(wrapper.state('dropdownOpen')).toBe('none');
   });
 });

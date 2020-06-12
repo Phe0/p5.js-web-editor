@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PreviewNav renders correctly 1`] = `
+<nav
+  className="nav preview-nav"
+>
+  <div
+    className="nav__items-left"
+  >
+    <div
+      className="nav__item-logo"
+    >
+      <test-file-stub
+        aria-label="p5.js Logo"
+        className="svg__logo"
+        focusable="false"
+        role="img"
+      />
+    </div>
+    <a
+      className="nav__item"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      testing-project
+    </a>
+    <p
+      className="toolbar__project-owner"
+    >
+      by
+    </p>
+    <a
+      className="nav__item"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      testing-owner
+    </a>
+  </div>
+  <div
+    className="nav__items-right"
+  >
+    <a
+      aria-label="Edit Sketch"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <test-file-stub
+        aria-hidden="true"
+        className="preview-nav__editor-svg"
+        focusable="false"
+      />
+    </a>
+  </div>
+</nav>
+`;
